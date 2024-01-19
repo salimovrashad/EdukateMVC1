@@ -1,0 +1,23 @@
+﻿@model InstructorCreateItemVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container-fluid">
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Name</label>
+            <input asp-for="Name" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label asp-for="PositionId" class="control-label">Category</label>
+            <select asp-for="PositionId" asp-items="@ViewBag.Positions"></select>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ImageFile" class="form-label">Position</label>
+            <input asp-for="ImageFile" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
